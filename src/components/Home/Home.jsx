@@ -2,12 +2,29 @@ import React from 'react'
 import Card from '../Card/Card'
 import NavigationFilter from '../NavigationFilter/NavigationFilter'
 
-import { getPosts } from '../../requests/Posts';
+import { getPosts, createPost } from '../../requests/Posts';
 
 export default function Home() {
-    const { data, error } = getPosts("http://localhost:3000/api/posts");
+    const api_url = "http://localhost:3000/api/posts"
+    const { data } = getPosts(api_url);
+
+    const handleCreatePost = async () => {
+        const newPost = {
+            title: "Nuevo titlo",
+            summary: "Resumen epico",
+            content: "Contenido aceptable"
+        }
+        try {
+            const result = await createPost(api_url, newPost);
+            console.log("Post created succesfully", result)
+        } catch (error) {
+            console.log("Error creating post:", error.message);
+        }
+    }
+
     return (
         <div>
+            <button onClick={handleCreatePost}>Boton</button>
             <div className="pl-4 pb-2 pt-10">
                 <NavigationFilter />
             </div>
