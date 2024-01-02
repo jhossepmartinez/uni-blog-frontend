@@ -1,6 +1,6 @@
 ### University Blog
 
-####Developed with:####
+#### Developed with:
 - React
 - Tailwind CSS
 - Vite
