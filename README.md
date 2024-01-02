@@ -1,5 +1,9 @@
 ### University Blog
 
+![Uni Blog image](web-screenshot.png)
+
+
+
 #### Developed with:
 - React
 - Tailwind CSS

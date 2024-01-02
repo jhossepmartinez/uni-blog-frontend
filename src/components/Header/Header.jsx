@@ -34,7 +34,7 @@ export default function Header() {
                     </div>
 
                     <div className="hidden lg:flex flex-1 justify-end md:opacity-100 opacity-0">
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Iniciar Sesion <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#" className="hidden text-sm font-semibold leading-6 text-gray-900">Iniciar Sesion <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </nav>
 
